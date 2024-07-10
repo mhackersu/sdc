@@ -40,13 +40,23 @@ Write a program that fetches prices for each currency pair that Gemini trades, c
 ## Questions
 
 - What would you do next to improve the script
-    - Adding a data persistence layer
-    - Error handling for threshold, must be integer or decimal, not string
-    - Error handling for currency pair that does not exist
+  - Adding a data persistence layer
+  - Error handling for threshold, must be integer or decimal, not string
 - Other interesting checks you might implement
+  - Error handling for currency pair that does not exist
 - Your approach to solving the task, and any issues with implementation
-    - Population/Sample calculation considerations with standard deviation
+  - Using closing prices on 1 Day candles to calculate sdev
 - The time it took you to write it
+  - 1 hr on container and shell script
+  - 3 hrs on code
+
+## Continuing work
+
+- Given additional time, items to complete
+  - Properly round decimal, ran into some issue with rounding
+  - Finish bool comparison operation, ran into some fiddly issue with comparing Decimal values
+  - Organize output and format as JSONL to console
+
 
 ## Scoring
 

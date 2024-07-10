@@ -2,6 +2,7 @@ import json
 import os
 from decimal import *
 import requests
+from datetime import datetime, timezone
 
 def main():
     currency = os.getenv('CURRENCY')
@@ -31,6 +32,12 @@ def main():
                 # DEBUG
                 # print(f'Closing price: {currency} Sum: {sum}')
 
+            # Get last price
+            la = d[-1]
+            el = la[4]
+            # DEBUG
+            # print(f'last price: {el}')
+
             e = len(d)
             # DEBUG
             # print(f'Total closing prices: {e}')
@@ -54,6 +61,9 @@ def main():
         else:
             print(f'Failed to fetch data: {res.status_code}')
 
+        print(f'Avg price: {am}')
+        print(f'Last price: {el}')
+
         return sd
     
     # Calculate Standard Deviation for Given Currency
@@ -68,6 +78,13 @@ def main():
     # print(type(t))
     print(f'Standard deviation: {asd}')
     # print(type(sdc))
+    
+    # Timestamp
+    ct = datetime.now(timezone.utc)
+    # Convert timestamp to ISO 8601
+    ts = ct.isoformat()
+    # Print timestamp
+    print(f'Timestamp: {ts}')
 
     # TODO Conditional statements not working correctly
     # print(asd<t)
