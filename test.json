@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2021-11-15T18:25:43.511Z",
+    "level": "INFO",
+    "trading_pair": "btcusd",
+    "deviation": true, 
+    "data": {
+      "last_price": "64381.98",
+      "average": "65196.09",
+      "change": "765.67",
+      "sdev": "1.2"
+    }
+  },
+  {
+    "timestamp": "2021-11-15T18:25:43.511Z", 
+    "level": "INFO",
+    "trading_pair": "ethusd",
+    "deviation": true,
+    "data": {
+      "last_price": "4607.69",
+      "average": "4661.36",
+      "change": "53.67",
+      "sdev": "1.1"
+    }
+  }
+]
