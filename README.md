@@ -41,6 +41,8 @@ Write a program that fetches prices for each currency pair that Gemini trades, c
 
 - What would you do next to improve the script
     - Adding a data persistence layer
+    - Error handling for threshold, must be integer or decimal, not string
+    - Error handling for currency pair that does not exist
 - Other interesting checks you might implement
 - Your approach to solving the task, and any issues with implementation
     - Population/Sample calculation considerations with standard deviation

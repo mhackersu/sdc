@@ -1,1 +1,1 @@
-docker build -t csr . && docker run --rm -e CURRENCY=$1 -e SDEV=$2 --name csr-1 csr
+docker build -t csr . && docker run --rm -e CURRENCY=$1 -e THRESHOLD=$2 --name csr-1 csr
