@@ -3,6 +3,7 @@ import os
 from decimal import *
 import requests
 from datetime import datetime, timezone
+import math
 
 def main():
     currency = os.getenv('CURRENCY')
@@ -40,20 +41,27 @@ def main():
 
             e = len(d)
             # DEBUG
-            # print(f'Total closing prices: {e}')
+            # print(f'Quantity of closing prices: {e}')
 
             am = sum / e
             # DEBUG
             # print(f'Arithmetic mean: {am}')
 
-            sdsum = 0
+            tvs = 0
             for c in d:
                 cp = c[4]
                 # Deviation = Closing price - Arithmetic mean
                 d = cp - am
-                sdsum += d
+                sq = d ** 2
+                # Total of variance squared
+                tvs += sq
+                # Arithmetic mean of squared variances
+                ams = tvs / e
+                # Square root
+                sqn = math.sqrt(ams)
+ 
             
-            sdc = sdsum / am
+            sdc = sqn / am
             sd = Decimal(sdc)
             # DEBUG
             # print(f'Standard deviation: {sd}')

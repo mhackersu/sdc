@@ -2,6 +2,8 @@
 
 ## Run the program
 
+- Start Docker
+
 `./entrypoint.sh <CURRENCY-PAIR> <DEVIATION-THRESHOLD>`
 
 eg.
@@ -46,6 +48,7 @@ Write a program that fetches prices for each currency pair that Gemini trades, c
   - Error handling for currency pair that does not exist
 - Your approach to solving the task, and any issues with implementation
   - Using closing prices on 1 Day candles to calculate sdev
+  - Using the standard deviation formula for population. I suppose it could be reasonably argued to use the sample formula, to account for Bessel's correction.
 - The time it took you to write it
   - 1 hr on container and shell script
   - 3 hrs on code
@@ -56,6 +59,7 @@ Write a program that fetches prices for each currency pair that Gemini trades, c
   - Properly round decimal, ran into some issue with rounding
   - Finish bool comparison operation, ran into some fiddly issue with comparing Decimal values
   - Organize output and format as JSONL to console
+  - Probablly could have made it easier on myself if I used the statistics module.
 
 
 ## Scoring
